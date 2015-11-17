@@ -62,4 +62,4 @@ var Grid = React.createClass({
   }
 });
 
-React.render(<Row ligns={["-","-","-"]}/>, document.body);
+React.render(<Grid/>, document.body);
