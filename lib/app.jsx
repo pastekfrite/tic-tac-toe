@@ -38,7 +38,7 @@ var Rows = React.createClass({
       <div>
         <Box initialValue="0" />
         <Box initialValue="1" />
-        <Box initialValue="0" />
+        <Box initialValue="2" />
       </div>
     );
   }
