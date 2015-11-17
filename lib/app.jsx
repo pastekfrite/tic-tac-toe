@@ -33,14 +33,18 @@ var Box = React.createClass({
    }
 });
 var Row = React.createClass({
+  handleClick : function(index) {
+    childData.updateState();
+  },
   render: function onRender () {
-    var ligns = ["-","-","-"];
-    //this.props.Lign;
+    var ligns = this.props.ligns;
     return (
       <div>
-        {ligns.map(function(lign) {
-          return <Box initialValue={lign} />
-        })}
+      {
+          ligns.map(function(lign, index) {
+            return <Box initialValue={lign} index={index} onClick={this.handleClick} />
+          }.bind(this))
+      }
       </div>
     );
   }
@@ -58,4 +62,4 @@ var Grid = React.createClass({
   }
 });
 
-React.render(<Row />, document.body);
+React.render(<Row ligns={["-","-","-"]}/>, document.body);
