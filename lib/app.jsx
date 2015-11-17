@@ -32,5 +32,19 @@ var Box = React.createClass({
     );
    }
 });
+var Rows = React.createClass({
+  render: function onRender () {
+    return (
+      <div>
+        <Box initialValue="0" />
+        <Box initialValue="1" />
+        <Box initialValue="0" />
+      </div>
+    );
+  }
+});
 
-React.render(<Box initialValue ={'X'}/>, document.body);
+
+
+React.render(<Rows/>, document.body);
+
