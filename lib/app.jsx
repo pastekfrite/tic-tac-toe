@@ -32,19 +32,30 @@ var Box = React.createClass({
     );
    }
 });
-var Rows = React.createClass({
+var Row = React.createClass({
   render: function onRender () {
+    var ligns = ["-","-","-"];
+    //this.props.Lign;
     return (
       <div>
-        <Box initialValue="0" />
-        <Box initialValue="1" />
-        <Box initialValue="2" />
+        {ligns.map(function(lign) {
+          return <Box initialValue={lign} />
+        })}
       </div>
     );
   }
 });
 
+var Grid = React.createClass({
+  render: function onRender () {
+    return (
+      <div>
+        <Row initialValue="-" />
+        <Row initialValue="-" />
+        <Row initialValue="-" />
+      </div>
+    );
+  }
+});
 
-
-React.render(<Rows/>, document.body);
-
+React.render(<Row />, document.body);
